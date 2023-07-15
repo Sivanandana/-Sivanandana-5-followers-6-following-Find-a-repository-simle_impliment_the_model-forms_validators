@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form{background: #d2f56b;
+             width: fit-content;
+             display: grid;
+             align-items:left;}
+        input{
+            background-color: rgb(240, 162, 123);
+            padding: 10px;
+            color: rgb(7, 7, 7);
+            font-size: 25px;
+            
+        }
+        #siva{
+            background:linear-gradient(200deg,rgb(107, 107, 237),rgb(66, 250, 66),rgb(33, 30, 30),rgb(190, 59, 59),rgb(252, 252, 5));
+            border-radius: 30px;
+        }
+        fieldset{width: fit-content;
+        background: #000;}
+        legend{
+            border: solid rgba(0, 0, 255, 0.071)e;
+            border-top-left-radius: 25px;
+            border-bottom-right-radius: 25px;
+            width: fit-content;
+            background-color: rgb(11, 128, 224);
+            padding-left: 10px;
+            padding-right: 10px;
+            font-size: 40px;
+            color: blue;
+            
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>This is webpage modelform</h1>
+        <fieldset>
+        <legend align="center">fill form</legend>
+        <form method="POST">
+            {% csrf_token %}
+            <table>{{WMFO.as_table}}</table>
+            <br><br>
+            <input type="submit" id="siva">
+        </form>
+        </fieldset>
+        
+    </center>
+    
+</body>
+</html>

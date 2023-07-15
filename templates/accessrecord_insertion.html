@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form{
+            color: crimson;
+            background-color: cyan;
+            width: fit-content;
+        }
+        input{background: #dc8cd8;}
+    </style>
+</head>
+<body>
+    <center>
+        <h1>This is accessrecord modelform</h1>
+        <form method="POST" >
+            {% csrf_token %}
+            {{AMFO.as_p}}
+            <input type="submit">
+        </form>
+    </center>
+    
+    
+</body>
+</html>
